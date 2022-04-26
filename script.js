@@ -4,10 +4,12 @@ const sha256 = require("js-sha256");
 const { viewLockupAccount, viewAccountBalance } = require("near-lockup-helper");
 
 // *** SET HERE DESIRED block_id ***
-//const blockReference = { block_id: 19145907 }; // block when opgran01.near received the lockup contract (October 14, 2020)
-//const blockReference = { block_id: 27402367 }; // block when opgran01.near transferred all the unlocked tokens (January 12, 2021)
-const blockReference = { block_id: 27402703 }; // block when opgran01.near transferred 1M tokens (January 12, 2021)
-//const blockReference = { finality: 'final' }
+const blockReference = {
+  finality: 'final'  // use the most recent block to fetch the information, alternatively, you can remove this line and set specific `block_id` (see examples below)
+  //block_id: 19145907 // Example block when opgran01.near received the lockup contract (October 14, 2020)
+  //block_id: 27402367 // Example block when opgran01.near transferred all the unlocked tokens (January 12, 2021)
+  //block_id: 27402703 // Example block when opgran01.near transferred 1M tokens (January 12, 2021)
+}
 
 const nearRpcConnectionConfig = {
   nodeUrl: "https://archival-rpc.mainnet.near.org",
