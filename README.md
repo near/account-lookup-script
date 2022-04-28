@@ -14,6 +14,6 @@ Operate the script:
 2. Run the script:
 
     ```sh
-    node script.js 2>/dev/null >output.txt
+    node script.js 2>/dev/null >output.csv
     ```
-3. CSV output will be saved to `output.txt` file and errors will be ignored (remove `2>/dev/null` to see all the errors)
+3. CSV output will be saved to `output.csv` file and errors will be ignored (remove `2>/dev/null` to see all the errors)
